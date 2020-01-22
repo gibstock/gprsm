@@ -35,7 +35,6 @@ h1, h2, h3{
 }
 /*header showcase*/
 #showcase{
-    min-height: 450px;
     height: 30vh;
     color: #fff;
     text-align: center;
@@ -50,13 +49,17 @@ h1, h2, h3{
     z-index: -1;
 }
 #showcase .content-wrap h1{
-    padding-top: 100px;
-    padding-bottom: 0;
-    color: #000;
-    font-size: 48px;
-    backdrop-filter: blur(3px);
+    color: #fff;
+    backdrop-filter: blur(1px);
+    font-size: 1em;
 }
-
+#showcase .content-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    
+}
 
 
 #showcase .content-wrap,
@@ -72,6 +75,10 @@ h1, h2, h3{
 }
 .content-text p{
     text-align: left;
+}
+.content-wrap img{
+    max-width: 100%;
+    width: 100%;
 }
 /* section-b*/
 #section-b{
@@ -121,8 +128,19 @@ padding: 2em;
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
-    
-    
+    #showcase{
+        height: 80vh;
+    }
+    .bg-image{
+        background: url('/images/lg-castle.jpg') no-repeat center ; 
+        background-size: cover;
+    }
+    #showcase .content-wrap{
+        align-items: center;
+    }
+    #showcase .content-wrap h1{
+        font-size: 2em;
+    }
     #section-a .content-text{
         columns: 1;
         column-gap: 2em;
@@ -143,7 +161,5 @@ padding: 2em;
         
     }
     
-    #main-footer a{
-        color: red;
-    }
+    
 }
